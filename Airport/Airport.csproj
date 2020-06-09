@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E8D87CE6-05B7-4487-A40C-AA0F66434F46}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Airport</RootNamespace>
+    <AssemblyName>Airport</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="GameViewController\App.config" />
+    <None Include="Properties\currentFile.game" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AirportUserControls\ContractData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AirportUserControls\ContractData.Designer.cs">
+      <DependentUpon>ContractData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AirportUserControls\FlightData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AirportUserControls\FlightData.Designer.cs">
+      <DependentUpon>FlightData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AirportUserControls\PlaneData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AirportUserControls\PlaneData.Designer.cs">
+      <DependentUpon>PlaneData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AirportUserControls\PlaneDataType.cs" />
+    <Compile Include="AirportUserControls\PlaneMarket.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AirportUserControls\PlaneMarket.Designer.cs">
+      <DependentUpon>PlaneMarket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AirportUserControls\UserBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AirportUserControls\UserBoard.Designer.cs">
+      <DependentUpon>UserBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AirportUserControls\UserScroll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AirportUserControls\UserScroll.Designer.cs">
+      <DependentUpon>UserScroll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MyFormStyle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\MyFormStyle.Designer.cs" />
+    <Compile Include="Controls\MyStyle.cs" />
+    <Compile Include="Controls\ShadowedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomDialogs\ComboboxDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomDialogs\ComboboxDialog.Designer.cs">
+      <DependentUpon>ComboboxDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drawer.cs" />
+    <Compile Include="FlatColors.cs" />
+    <Compile Include="GameLogicInterface\FlightProgressEventArgs.cs" />
+    <Compile Include="GameLogicInterface\IGameLogicInteractable.cs" />
+    <Compile Include="GameLogicInterface\Speeds.cs" />
+    <Compile Include="GameLogic\CitiesInfo.cs" />
+    <Compile Include="GameLogic\Game.cs" />
+    <Compile Include="GameLogic\GameConstants.cs" />
+    <Compile Include="GameLogic\PlaneFlight.cs" />
+    <Compile Include="GameModel\BulletinBoard.cs" />
+    <Compile Include="GameModel\City.cs" />
+    <Compile Include="GameModel\Contract.cs" />
+    <Compile Include="GameModel\Flight.cs" />
+    <Compile Include="GameModel\Lease.cs" />
+    <Compile Include="GameModel\MarketContract.cs" />
+    <Compile Include="GameModel\Plane.cs" />
+    <Compile Include="GameModel\PlaneCharacteristics.cs" />
+    <Compile Include="GameModel\Rent.cs" />
+    <Compile Include="GameModel\Route.cs" />
+    <Compile Include="GameViewController\ContractForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameViewController\ContractForm.Designer.cs">
+      <DependentUpon>ContractForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameViewController\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameViewController\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameViewController\Program.cs" />
+    <Compile Include="GameViewController\StartupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameViewController\StartupForm.Designer.cs">
+      <DependentUpon>StartupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AirportUserControls\ContractData.resx">
+      <DependentUpon>ContractData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AirportUserControls\FlightData.resx">
+      <DependentUpon>FlightData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AirportUserControls\PlaneData.resx">
+      <DependentUpon>PlaneData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AirportUserControls\PlaneMarket.resx">
+      <DependentUpon>PlaneMarket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AirportUserControls\UserBoard.resx">
+      <DependentUpon>UserBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AirportUserControls\UserScroll.resx">
+      <DependentUpon>UserScroll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomDialogs\ComboboxDialog.resx">
+      <DependentUpon>ComboboxDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameViewController\ContractForm.resx">
+      <DependentUpon>ContractForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameViewController\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameViewController\StartupForm.resx">
+      <DependentUpon>StartupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IcoForInterfaces\date.ico" />
+    <Content Include="IcoForInterfaces\delete.ico" />
+    <Content Include="IcoForInterfaces\moneybag.ico" />
+    <Content Include="IcoForInterfaces\plane.ico" />
+    <Content Include="IcoForInterfaces\plane_takeoff.ico" />
+    <Content Include="IcoForInterfaces\shoping.ico" />
+    <Content Include="IcoForInterfaces\upone.png" />
+    <Content Include="IcoForInterfaces\upthree.png" />
+    <Content Include="IcoForInterfaces\uptwo.png" />
+    <None Include="Resources\btnUpOne.BackgroundImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
